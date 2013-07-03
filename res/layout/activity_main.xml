@@ -1,0 +1,86 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity" >
+
+    <fragment
+        android:id="@+id/logo_fragment"
+        android:name="fr.utt.socialize.controller.LogoController"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:layout="@layout/logo_bar" />
+
+    <!--
+	<Button
+	    android:id="@+id/newContact"
+	    style="?android:attr/buttonStyleSmall"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_marginLeft="250dp"
+	    android:text="new" />
+    -->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/blue" >
+        
+         <TextView
+            android:id="@+id/SMS"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:text="SMS"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            android:textSize="@dimen/size34" />
+
+        <Button
+            android:id="@+id/Facebook"
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            android:layout_alignParentTop="true"
+            android:layout_toLeftOf="@+id/Mail"
+            android:background="@drawable/facebook1" />
+
+        <Button
+            android:id="@+id/Mail"
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            android:layout_alignParentTop="true"
+            android:layout_toLeftOf="@+id/Twitter"
+            android:background="@drawable/email" />
+
+        <Button
+            android:id="@+id/Twitter"
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/twitter1" />
+
+       
+
+    </RelativeLayout>
+
+    <include layout="@layout/name_bar" />
+
+    <fragment
+        android:id="@+id/list_fragment"
+        android:name="fr.utt.socialize.controller.ContactsListController"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        tools:layout="@layout/list" />
+
+    <fragment
+        android:id="@+id/main_menu_fragment"
+        android:name="fr.utt.socialize.controller.MainMenuController"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:layout="@layout/main_menu_bar" />
+
+</LinearLayout>

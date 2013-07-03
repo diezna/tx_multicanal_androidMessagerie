@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest package="fr.utt.socialize"
+    android:versionCode="1"
+    android:versionName="1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="17" />    
+    
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+    <uses-permission android:name="android.permission.WRITE_CONTACTS"/>
+    <uses-permission android:name="android.permission.SEND_SMS" />
+     <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.WRITE_SMS" />
+    
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/icon_socialize"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+			android:name=".activity.MainActivity">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.LAUNCHER" />
+			</intent-filter>
+		</activity>
+		<activity android:name=".activity.AnotherActivity" />
+        <activity android:name=".activity.CopyrightActivity" />
+        <activity android:name=".activity.MediaActivity" />
+        <activity android:name=".activity.ContactActivity" />
+        <activity android:name=".activity.newcontactsActivity" />
+        <activity android:name=".activity.NewGroupeActivity" />
+        <activity android:name=".activity.GroupeActivity" />
+        <activity android:name=".activity.ContactOfGroupeActivity" />
+        <activity android:name=".activity.MessageActivity" />
+        <activity android:name=".activity.NewMemberGroupeActivity" />
+        <activity android:name=".activity.FacebookActivity" />
+        <activity android:name=".activity.MailContactActivity" />
+        <activity android:name=".activity.MailOfGroupActivity" />
+        <activity android:name=".activity.NewMemberGroupeMailActivity" />
+        <activity android:name=".activity.PickerActivity" />        
+     
+		 <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/app_id"/>
+		<activity android:name="com.facebook.LoginActivity"/> 
+		
+		
+		<activity android:name="PickerActivity"
+		    android:label="@string/app_name" />     
+        
+        
+    </application>
+
+</manifest>

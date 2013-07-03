@@ -1,0 +1,106 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white" >
+
+        <Button
+        android:id="@+id/AddMember"
+        style="@drawable/add2_button"
+        android:layout_width="63dp"
+        android:layout_height="35dp"
+        android:layout_marginLeft="250dp"
+        android:background="@drawable/add2_button" />
+        
+        
+
+        <Button
+            android:id="@+id/delete_selected"
+            android:layout_width="60dp"
+            android:layout_height="35dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/delete" />
+
+        <Button
+            android:id="@+id/cheked_all"
+            android:layout_width="65dp"
+            android:layout_height="40dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/delete_all_members" />
+       
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/black" >
+
+         <Button
+            android:id="@+id/SmsSelect"
+            android:layout_width="80dp"
+            android:layout_height="35dp"
+            android:layout_marginBottom="100dp"
+            android:background="@drawable/sms2" />
+
+        <Button
+            android:id="@+id/Facebook"
+            android:layout_width="80dp"
+            android:layout_height="35dp"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/SmsSelect"
+            android:background="@drawable/facebook1" />
+
+        <Button
+            android:id="@+id/Mail"
+            android:layout_width="80dp"
+            android:layout_height="35dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="5dp"
+            android:layout_toRightOf="@+id/Facebook"
+            android:background="@drawable/email" />
+
+        <Button
+            android:id="@+id/Twitter"
+            android:layout_width="80dp"
+            android:layout_height="35dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/twitter1" />
+        
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/title_item"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/blue"
+        android:paddingLeft="7dp"
+        android:text="click Sms button to send sms "
+        android:textColor="#ffffff"
+        android:textSize="@dimen/size18" />
+
+    <ListView
+        android:id="@+id/listmember_groupe"
+        android:layout_width="fill_parent"
+        android:layout_height="290dp"
+        android:layout_weight="0.54"
+        android:background="@color/black"
+        android:cacheColorHint="@color/black" />
+
+    <fragment
+        android:id="@+id/main_menu_fragment"
+        android:name="fr.utt.socialize.controller.MainMenuController"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        tools:layout="@layout/main_menu_bar" />
+
+</LinearLayout>

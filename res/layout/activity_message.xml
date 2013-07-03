@@ -1,0 +1,36 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical"
+	tools:context=".MainActivity" >
+
+    	<include layout="@layout/name_bar"/>
+    	
+    	 <TextView
+        android:id="@+id/title_item"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/blue"
+        android:paddingLeft="7dp"
+        android:text="outbox"
+        android:textColor="#ffffff"
+        android:textSize="@dimen/size18" />
+    
+   <ListView
+        android:id="@+id/inbox"
+        android:layout_width="fill_parent"
+        android:layout_height="290dp"
+        android:layout_weight="0.54"
+        android:background="@color/black"
+        android:cacheColorHint="@color/black" />
+    
+       <fragment
+        android:id="@+id/main_menu_fragment"
+        android:name="fr.utt.socialize.controller.MainMenuController"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        tools:layout="@layout/main_menu_bar" />
+
+</LinearLayout>
